@@ -10,6 +10,7 @@ queue.popleft()
 queue.append(1)
 queue.append(4)
 queue.popleft()
+queue.append(8)
 
 print(queue)
 queue.reverse()
