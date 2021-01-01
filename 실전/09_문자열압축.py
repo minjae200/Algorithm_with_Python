@@ -17,7 +17,3 @@ def solution(s):
         compression += str(count) + current_string if count >= 2 else current_string
         answer = min(answer, len(compression))
     return answer
-
-
-s = str(input())
-print(solution(s))
