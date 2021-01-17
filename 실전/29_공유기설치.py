@@ -4,8 +4,12 @@ for _ in range(n):
     array.append(int(input()))
 array.sort()
 
-start, end = array[1] -  array[0] , array[-1] - array[0]
+end = array[-1] - array[0]
+start = 1e9
+for i in range(n-1):
+    start = min(start, array[i+1]-array[i])
 result = 0
+
 while (start <= end):
     value = array[0]
     count = 1
