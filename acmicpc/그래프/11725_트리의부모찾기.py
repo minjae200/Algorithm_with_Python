@@ -1,5 +1,5 @@
 import sys
-sys.setrecursionlimit(10**6)
+sys.setrecursionlimit(10**5)
 n = int(input())
 
 tree = [[] for _ in range(n+1)]
@@ -11,12 +11,12 @@ for _ in range(n-1):
 
 result = [0 for _ in range(n+1)]
 
-def dfs(root, tree1, result1):
-    for child in tree1[root]:
-        if result1[child] == 0:
-            result1[child] = root
-            dfs(child, tree1, result1)
+def dfs(root):
+    for child in tree[root]:
+        if result[child] == 0:
+            result[child] = root
+            dfs(child)
 
-dfs(1, tree, result)
+dfs(1)
 for i in range(2, n+1):
     print(result[i])
