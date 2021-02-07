@@ -1,0 +1,1 @@
+print("290", "minjaechoi", sep='\n')
