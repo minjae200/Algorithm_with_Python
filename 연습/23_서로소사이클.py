@@ -7,10 +7,10 @@ def union_parent(parent, x, y):
     x = find_parent(parent, x)
     y = find_parent(parent, y)
 
-    if x < b:
-        parent[b] = a
+    if x < y:
+        parent[y] = x
     else:
-        parent[a] = b
+        parent[x] = y
 
 v, e = map(int, input().split())
 parent = [0] * (v+1)
